@@ -30,12 +30,47 @@ console.log(mascotas[0]);
 {   var ingresos = 300000;
     var emancipado = true;
     var edad = 20;
-    if((edad >= 18) { //&& "y" || "o"
+    if(edad >= 18) { //&& "y" || "o"
         console.log("podes acceder a un paquete");
-    }else if (){
-        
     }
     else {
         console.log("no podes acceder a un paquete");
     }
 }
+
+{   
+    var evaluacion; 
+
+    switch (edad) {
+        case 15:
+            evaluacion = "Tenes 15 años";
+            break;
+        
+        case 20:
+            evaluacion = "Tenes 20 años";
+            break;
+
+        default:
+            evaluacion = "No tenes ninguna de las edades";
+            break;
+    }
+    
+    console.log("Pudimos evaluar que, " + evaluacion);
+}
+
+{
+    var cheques = [0, 1, 2, 3];
+    var valorescheques = [213, 432, 5432, 43]
+
+    for (let i=0; i <= cheques.length; i=i+1) {
+        if (cheques[i] == 3){
+            console.log(valorescheques[i]);
+        }
+    }
+
+}
+
+
+
+
+
