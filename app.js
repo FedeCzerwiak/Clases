@@ -70,7 +70,52 @@ console.log(mascotas[0]);
 
 }
 
+//Clase 26 05
 
+var i = 5;
+
+while (i>0) {
+    console.log ("i es igual a " + i);
+    i--;
+}
+
+var i = 0;
+
+while (i<5) {
+    console.log ("i es igual a " + i);
+    i++;
+}
+
+do {
+    console.log ("i es igual a " + i);
+    i--;
+} while (i>0);
+
+var texto = 'Aguante la C2';
+function ponerleonda (mensaje){
+    return mensaje + '!!';
+} ponerleonda ('Agunate el ITBA');
+
+var cheques = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function comisiones (lista){
+    for(let i=0; i <= lista.length; i++){
+        console.log(lista[i]);
+    }
+}
+
+comisiones(cheques);
+
+function cuento (lista){
+    var contador = 0;
+    for(let i=0; i < lista.length; i++){
+        contador++;
+    }
+    return contador;
+}
+
+var cantidad = cuento(cheques);
+console.log(cantidad);
 
 
 
