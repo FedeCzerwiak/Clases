@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/fczer/Desktop/ITBA/Clases/Clase_18_07/chinook.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="5166"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainalbums"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM albums LIMIT 10
+
+SELECT * FROM artists LIMIT 10
+
+SELECT * 
+FROM albums 
+LEFT JOIN artists
+ON albums.ArtistId = artists.ArtistId
+
+SELECT * 
+FROM artists
+LEFT JOIN albums
+ON albums.ArtistId = artists.ArtistId
+WHERE albums.AlbumId IS NULL
+
+SELECT artists.Name, albums.Title
+FROM artists
+LEFT JOIN albums
+ON albums.ArtistId = artists.ArtistId
+
+SELECT art.Name, alb.Title
+FROM artists AS art 
+LEFT JOIN albums AS alb 	
+ON alb.ArtistId = art.ArtistId
+
+SELECT Name, Title
+FROM artists AS art 
+LEFT JOIN albums AS alb 	
+ON alb.ArtistId = art.ArtistId
+WHERE AlbumId IS NOT NULL
+
+SELECT Name, Title
+FROM artists AS art 
+LEFT JOIN albums AS alb 	
+ON alb.ArtistId = art.ArtistId
+WHERE AlbumId IS NULL
+
+SELECT Name, Title
+FROM artists AS art 
+INNER JOIN albums AS alb 	
+ON alb.ArtistId = art.ArtistId
+
+SELECT Name, Title
+FROM albums AS alb
+INNER JOIN artists AS art	
+ON alb.ArtistId = art.ArtistId
+
+SELECT *
+FROM tracks
+INNER JOIN albums 
+ON albums.AlbumId = tracks.AlbumId
+INNER JOIN artists
+ON artists.ArtistId = albums.ArtistId
+
+SELECT tracks.name AS tema, albums.Title, artists.Name
+FROM tracks
+INNER JOIN albums 
+ON albums.AlbumId = tracks.AlbumId
+INNER JOIN artists
+ON artists.ArtistId = albums.ArtistId
+ORDER BY tracks.Name 
+
+SELECT m.FirstName || ' ' || m.LastName AS manager,
+		e.FirstName || ' ' || e.LastName AS employee
+FROM employees e
+INNER JOIN employees m 
+ON m.EmployeeId = e.ReportsTo
+ORDER BY manager
+
+SELECT * 
+FROM employees
+
+SELECT FirstName, LastName, 'empleado'
+FROM employees
+UNION
+SELECT FirstName, LastName, 'ciente'
+FROM customers
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
